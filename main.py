@@ -26,7 +26,7 @@ for i in range(1, n + 1):
 #вывод результатов
 print(f"Сумма: {sum_num}")
 print(f"Произведение: {product}")
-print(f"Сумма квадратов: {sum_squares}")"""
+print(f"Сумма квадратов: {sum_squares}")
 
 
 #Задание 3
@@ -44,4 +44,22 @@ for i in range(n):
 def fibonacci(n):
     if n <= 1:
         return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    return fibonacci(n - 1) + fibonacci(n - 2)"""
+
+
+#Задание 4
+#ввод данных
+n = int(input("Введите N: "))
+original = n  # сохраняем исходное значение N 
+factors = []  
+divisor = 2 
+#вычисление простых множителей
+while divisor * divisor <= n:
+    while n % divisor == 0:
+        factors.append(divisor) 
+        n //= divisor 
+    divisor += 1 
+if n > 1:
+    factors.append(n)
+#вывод результатов
+print(f"{original} = {' x '.join(map(str, factors))}")
