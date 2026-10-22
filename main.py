@@ -44,7 +44,7 @@ for i in range(n):
 def fibonacci(n):
     if n <= 1:
         return n
-    return fibonacci(n - 1) + fibonacci(n - 2)"""
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 #Задание 4
@@ -62,4 +62,24 @@ while divisor * divisor <= n:
 if n > 1:
     factors.append(n)
 #вывод результатов
-print(f"{original} = {' x '.join(map(str, factors))}")
+print(f"{original} = {' x '.join(map(str, factors))}")"""
+
+#Задание 5
+#ввод данных
+n = int(input("Введите N: "))
+original = n
+#инициализация переменных
+count, total, prod, reversed_num = 0, 0, 1, 0
+#перебор цифр числа
+while n > 0:
+    digit = n % 10
+    count += 1
+    total += digit
+    prod *= digit
+    reversed_num = reversed_num * 10 + digit
+    n //= 10
+#вывод результатов
+print(f"Количество цифр: {count}")
+print(f"Сумма цифр: {total}")
+print(f"Произведение цифр: {prod}")
+print(f"Перевернутое число: {reversed_num}")
