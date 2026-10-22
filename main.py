@@ -62,7 +62,7 @@ while divisor * divisor <= n:
 if n > 1:
     factors.append(n)
 #вывод результатов
-print(f"{original} = {' x '.join(map(str, factors))}")"""
+print(f"{original} = {' x '.join(map(str, factors))}")
 
 #Задание 5
 #ввод данных
@@ -82,4 +82,21 @@ while n > 0:
 print(f"Количество цифр: {count}")
 print(f"Сумма цифр: {total}")
 print(f"Произведение цифр: {prod}")
-print(f"Перевернутое число: {reversed_num}")
+print(f"Перевернутое число: {reversed_num}")"""
+
+#Задание 6
+#ввод данных
+n = int(input("Введите N: "))
+original = n
+reverse_num = 0
+#переворот числа
+temp = n
+while temp > 0:
+    digit = temp % 10
+    reverse_num = reverse_num * 10 + digit
+    temp //= 10
+#проверка на палиндром
+if original == reverse_num:
+    print(f"{original} является палиндромом.")
+else:
+    print(f"{original} не является палиндромом.")
