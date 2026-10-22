@@ -82,7 +82,7 @@ while n > 0:
 print(f"Количество цифр: {count}")
 print(f"Сумма цифр: {total}")
 print(f"Произведение цифр: {prod}")
-print(f"Перевернутое число: {reversed_num}")"""
+print(f"Перевернутое число: {reversed_num}")
 
 #Задание 6
 #ввод данных
@@ -99,4 +99,29 @@ while temp > 0:
 if original == reverse_num:
     print(f"{original} является палиндромом.")
 else:
-    print(f"{original} не является палиндромом.")
+    print(f"{original} не является палиндромом.")"""
+
+#Задание 7
+#ввод данных
+n = int(input("Введите N: "))
+m = int(input("Введите M: "))
+#Прямоугольник
+print("Прямоугольник (n x m):")
+for i in range(n):
+    for j in range(m):
+        print("* ", end="")
+    print()  # переход на новую строку
+#Треугольник
+print("Треугольник (высотой n):")
+for i in range(1, n + 1):
+    print("* " * i)
+#Ёлочка
+print("Ёлочка (высотой n):")
+for i in range(1, n + 1):
+    print(" " * (n - i) + "* " * (2 * i - 1))
+#Ромб
+print("Ромб (высотой n):")
+for i in range(1, n + 1):
+    print(" " * (n - i) + "* " * (2 * i - 1))
+for i in range(n - 1, 0, -1):
+    print(" " * (n - i) + "* " * (2 * i - 1))
